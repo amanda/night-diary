@@ -8,7 +8,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.container {
+  background-color: rgb(102, 100, 101);
+  display: flex;
+}
+
+.notebook {
+  background-image: url('./img/notebookcanvas.png');
 }

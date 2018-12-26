@@ -1,17 +1,18 @@
 import React from 'react'
+import StickerPicker from './StickerPicker'
+
 // import ColorPicker from './ColorPicker'
-// import StickerPicker from './StickerPicker'
 // import ModePicker from './ModePicker'
-//
+
 // <ColorPicker selected={selectedColor} />
 // <ModePicker selected={selectedMode} />
-// <StickerPicker selected={selectedSticker} />
 
 
-const ControlPanel = ({ selectedColor, selectedMode, selectedSticker }) => {
+const ControlPanel = ({ selectedColor, selectedMode, selectedSticker,
+  onColorSelect, onModeSelect, onStickerSelect }) => {
   return (
     <div className="control-panel">
-
+      <StickerPicker selected={selectedSticker} onStickerSelect={onStickerSelect} />
     </div>
   )
 }

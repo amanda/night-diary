@@ -1,28 +1,16 @@
 import * as types from '../constants/actionTypes'
 
-const selectStickerCreator = sticker => ({
+export const selectSticker = sticker => ({
   type: types.SELECT_STICKER,
   sticker
 })
 
-const selectModeCreator = mode => ({
+export const selectMode = mode => ({
   type: types.SELECT_MODE,
   mode
 })
 
-const selectColorCreator = color => ({
+export const selectColor = color => ({
   type: types.SELECT_COLOR,
   color
 })
-
-export const selectSticker = sticker => dispatch => {
-  dispatch(selectStickerCreator(sticker))
-}
-
-export const selectMode = mode => dispatch => {
-  dispatch(selectModeCreator(mode))
-}
-
-export const selectColor = color => dispatch => {
-  dispatch(selectColorCreator(color))
-}

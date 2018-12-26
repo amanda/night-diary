@@ -1,3 +1,3 @@
-export const DRAWING = 'DRAWING'
-export const STICKER = 'STICKER'
-export const TYPING = 'TYPING'
+export const DRAWING = 'drawing'
+export const STICKER = 'sticker'
+export const TYPING = 'typing'

@@ -9,11 +9,39 @@ body {
   background-color: #000;
 }
 
-.container {
-  background-color: rgb(102, 100, 101);
-  display: flex;
-}
-
 .notebook {
   margin: 10%;
+  background-image: url('./img/notebookcanvas.png');
+  background-repeat: no-repeat;
+  align-self: center;
+}
+
+.control-panel {
+  display: flex;
+  justify-content: center;
+}
+
+.sticker {
+  width: 100%;
+  padding: .5em;
+  margin: .1em;
+}
+
+.colorblock {
+  width: 100%;
+  padding: 1em;
+  margin: .2em;
+}
+
+.sticker-picker {
+  display: flex;
+  justify-content: center;
+  margin-right: 3em;
+  align-items: center;
+}
+
+.color-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

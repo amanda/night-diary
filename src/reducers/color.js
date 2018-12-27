@@ -5,7 +5,7 @@ const color = (state={}, action) => {
     case SELECT_COLOR:
       return {
         ...state,
-        color: action.color
+        name: action.color
       }
     default:
       return state

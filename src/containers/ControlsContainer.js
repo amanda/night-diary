@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { selectMode, selectColor, selectSticker } from '../actions'
 import ControlPanel from '../components/ControlPanel'
-import _get from 'lodash.get'
 
 const ControlsContainer = ({ selectedColor, selectedMode, selectedSticker,
   selectMode, selectColor, selectSticker }) => {
@@ -19,9 +18,9 @@ const ControlsContainer = ({ selectedColor, selectedMode, selectedSticker,
 }
 
 const mapStateToProps = state => ({
-  selectedColor: _get(state, 'color', ''),
-  selectedMode: _get(state, 'mode', ''),
-  selectedSticker: _get(state, 'sticker', '')
+  selectedColor: state.color.name || '#FFFFFF',
+  selectedMode: state.mode.name || 'drawing',
+  selectedSticker: state.sticker.name || 'moon'
 })
 
 const mapDispatchToProps = {

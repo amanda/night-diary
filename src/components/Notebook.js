@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
-import notebook from '../img/notebookcanvas.png'
-
+import Canvas from './Canvas'
 
 class Notebook extends Component {
   render() {
+    console.log('notebook props?', this.props)
+
+    const color = this.props.selectedColor
+    const mode = this.props.selectedMode
+    const sticker = this.props.selectedSticker
     return (
       <div className="notebook">
-        <img src={notebook} alt="notebook" />
+        <Canvas color={color} sticker={sticker} mode={mode} />
       </div>
     )
   }

@@ -1,26 +1,20 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Notebook from '../components/Notebook'
-import _get from 'lodash.get'
 
 const NotebookContainer = ({ selectedColor, selectedMode, selectedSticker,
-  selectMode, selectColor, selectSticker }) => {
-  return (
-  <Notebook
-    selectedColor={selectedColor}
-    selectedMode={selectedMode}
-    selectedSticker={selectedSticker}
-    onColorSelect={selectColor}
-    onModeSelect={selectMode}
-    onStickerSelect={selectSticker}
-     />
-   )
-}
+  selectMode, selectColor, selectSticker }) => (
+    <Notebook
+      selectedColor={selectedColor}
+      selectedMode={selectedMode}
+      selectedSticker={selectedSticker}
+    />
+  )
 
 const mapStateToProps = state => ({
-  selectedColor: _get(state, 'color', ''),
-  selectedMode: _get(state, 'mode', ''),
-  selectedSticker: _get(state, 'sticker', '')
+  selectedColor: state.color.name || '#FFFFFF',
+  selectedMode: state.mode.name || 'drawing',
+  selectedSticker: state.sticker.name || 'moon'
 })
 
 export default connect(

@@ -56,7 +56,7 @@ export const STICKERS_PAGEONE = [
 export const STICKERS_PAGETWO = [
   'lamp',
   'bed',
-  'window',
+  'windoww',
   'cat',
   'floor',
   'boombox',

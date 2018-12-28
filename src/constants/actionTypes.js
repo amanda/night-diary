@@ -1,3 +1,5 @@
 export const SELECT_COLOR = 'SELECT_COLOR'
 export const SELECT_STICKER = 'SELECT_STICKER'
 export const SELECT_MODE = 'SELECT_MODE'
+export const STICKER_PAGE = 'STICKER_PAGE'
+export const COLOR_PAGE = 'COLOR_PAGE'

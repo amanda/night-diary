@@ -9,7 +9,7 @@ const Sticker = ({ name, selected, onStickerSelect, onModeSelect }) => {
     onModeSelect('sticker')
   }
   const style = {
-    border: isSelected ? '.2em solid white' : '',
+    border: isSelected ? '.1em solid yellow' : '',
     borderRadius: '10em'
   }
   return (

@@ -28,28 +28,23 @@ body {
 }
 
 .colorblock {
-  width: 100%;
-  padding: 1em;
+  padding: .25em;
   margin: .2em;
-  border: .2em solid white;
+  border: .1em solid white;
 }
 
-.sticker-picker {
+.picker {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.color-picker {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: white;
+  cursor: pointer;
 }
 
 .control {
-  border: .5em solid white;
+  border: .15em solid white;
   border-radius: .5em;
-  padding: 1em;
+  padding: .4em;
   background-color: black;
 }
 
@@ -59,4 +54,16 @@ body {
 
 .control-right {
 
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.left-arrow {
+  margin-right: .25em;
+}
+
+.right-arrow {
+  margin-left: .25em;
 }

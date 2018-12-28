@@ -6,8 +6,12 @@ const ControlPanel = ({ selectedColor, selectedMode, selectedSticker,
   onColorSelect, onModeSelect, onStickerSelect }) => {
   return (
     <div className="control-panel">
-      <StickerPicker selected={selectedSticker} onStickerSelect={onStickerSelect} onModeSelect={onModeSelect} />
-      <ColorPicker selected={selectedColor} onColorSelect={onColorSelect} onModeSelect={onModeSelect} />
+      <div className="control control-left">
+        <ColorPicker selected={selectedColor} onColorSelect={onColorSelect} onModeSelect={onModeSelect} />
+      </div>
+      <div className="control control-right">
+        <StickerPicker selected={selectedSticker} onStickerSelect={onStickerSelect} onModeSelect={onModeSelect} />
+      </div>
     </div>
   )
 }

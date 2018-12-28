@@ -9,7 +9,7 @@ const Color = ({ color, selected, onColorSelect, onModeSelect }) => {
   }
   const style = {
     backgroundColor: `${color}`,
-    border: isSelected ? '1px solid white' : ''
+    border: isSelected ? '1em solid magenta' : ''
   }
   return (
     <div style={style} onClick={() => select(color)} className={`${color} colorblock`}></div>

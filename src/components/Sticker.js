@@ -1,22 +1,16 @@
 import React from 'react'
-import moon from '../img/sticker_moon.png'
+import { getImg } from '../constants/stickerNames'
 
 const Sticker = ({ name, selected, onStickerSelect, onModeSelect }) => {
-  let img
-  switch (name) {
-    case 'moon':
-      img = moon
-      break
-    default:
-      img = ''
-  }
+  const img = getImg(name)
   const isSelected = selected === name
   const select = name => {
     onStickerSelect(name)
     onModeSelect('sticker')
   }
   const style = {
-    backgroundColor: isSelected ? 'goldenrod' : ''
+    border: isSelected ? '.2em solid white' : '',
+    borderRadius: '10em'
   }
   return (
     <div style={style} onClick={() => select(name)} className={`${name} sticker`}><img src={img} alt={name} /></div>

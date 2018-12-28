@@ -6,11 +6,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000;
+  background-color: rgb(102, 100, 101);
 }
 
 .notebook {
-  margin: 10%;
+  margin: 10% 10% 5% 10%;
   background-image: url('./img/notebookcanvas.png');
   background-repeat: no-repeat;
   align-self: center;
@@ -31,12 +31,12 @@ body {
   width: 100%;
   padding: 1em;
   margin: .2em;
+  border: .2em solid white;
 }
 
 .sticker-picker {
   display: flex;
   justify-content: center;
-  margin-right: 3em;
   align-items: center;
 }
 
@@ -44,4 +44,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.control {
+  border: .5em solid white;
+  border-radius: .5em;
+  padding: 1em;
+  background-color: black;
+}
+
+.control-left {
+  margin-right: 3em;
+}
+
+.control-right {
+
 }

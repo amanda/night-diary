@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import moon from '../img/sticker_moon.png'
+import { getImg } from '../constants/stickerNames'
 
 class Canvas extends Component {
   constructor(props) {
@@ -22,8 +22,9 @@ class Canvas extends Component {
     }
     if (this.props.mode === 'sticker') {
       console.log('sticker down')
+      const sticker = this.props.sticker
       let img = new Image()
-      img.src = moon
+      img.src = getImg(sticker)
       this.ctx.drawImage(img, offsetX, offsetY)
     }
   }

@@ -16,7 +16,7 @@ body {
 } */
 
 .notebook {
-  margin: 10% 10% 5% 10%;
+  margin: 5% 10% 5% 10%;
   background-image: url('./img/notebookcanvas.png');
   background-repeat: no-repeat;
   align-self: center;
@@ -50,7 +50,6 @@ body {
 .control {
   border: .15em solid white;
   border-radius: .5em;
-  padding: .4em;
   background-color: black;
 }
 
@@ -59,6 +58,10 @@ body {
   margin-right: 3em;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.control-top-left {
+  display: flex;
 }
 
 .control-right {
@@ -70,13 +73,19 @@ body {
   padding: 1em;
 }
 
-.paper-picker-control {
-  margin-top: 1em;
-  padding: 1em;
-}
-
 .sticker-picker {
   flex-direction: column;
+}
+
+.right-side-control {
+  margin-right: .5em;
+}
+
+.color-picker {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  justify-content: space-around;
 }
 
 .sticker-picker-container {

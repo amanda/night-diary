@@ -12,20 +12,22 @@ const ControlPanel = ({ selectedColor, selectedMode, selectedSticker,
   return (
     <div className="control-panel">
       <div className="control-left">
-        <div className="control color-picker-control">
-          <ColorPicker
-            selected={selectedColor}
-            onColorSelect={onColorSelect}
-            onModeSelect={onModeSelect}
-            onColorPage={onColorPage}
-            currentColorPage={currentColorPage} />
-        </div>
-        <div className="control paper-picker-control">
-          <PaperPicker
-            selected={selectedPaper}
-            onPaperSelect={onPaperSelect}
-            onPaperPage={onPaperPage}
-            currentPaperPage={currentPaperPage} />
+        <div className="control-top-left">
+          <div className="control paper-picker-control right-side-control">
+            <ColorPicker
+              selected={selectedColor}
+              onColorSelect={onColorSelect}
+              onModeSelect={onModeSelect}
+              onColorPage={onColorPage}
+              currentColorPage={currentColorPage} />
+          </div>
+          <div className="control paper-picker-control">
+            <PaperPicker
+              selected={selectedPaper}
+              onPaperSelect={onPaperSelect}
+              onPaperPage={onPaperPage}
+              currentPaperPage={currentPaperPage} />
+          </div>
         </div>
         <div className="control font-picker-control">
           <FontPicker

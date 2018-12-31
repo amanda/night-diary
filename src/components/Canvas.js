@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { getImg } from '../constants/stickerNames'
+import * as modeTypes from '../constants/journalModes'
 
 class Canvas extends Component {
   constructor(props) {
@@ -14,18 +15,30 @@ class Canvas extends Component {
   prevPos = { offsetX: 0, offsetY: 0 }
 
   onMouseDown({ nativeEvent }) {
-    const { offsetX, offsetY } = nativeEvent
-    if (this.props.mode ==='drawing') {
+    console.log(nativeEvent)
+    const { offsetX, offsetY, x, y } = nativeEvent
+    if (this.props.mode === modeTypes.DRAWING) {
       console.log('drawin')
       this.isPainting = true
       this.prevPos = { offsetX, offsetY }
     }
-    if (this.props.mode === 'sticker') {
+    if (this.props.mode === modeTypes.STICKER) {
       console.log('sticker down')
       const sticker = this.props.sticker
       let img = new Image()
       img.src = getImg(sticker)
       this.ctx.drawImage(img, offsetX, offsetY)
+    }
+    if (this.props.mode === modeTypes.TYPING) {
+      const $text = document.createElement('input')
+      $text.type = 'input'
+      const $cnvs = document.querySelector('.notebook')
+      console.log($cnvs)
+      $text.className = 'typing-area'
+      $text.style.top = y + 'px';
+      $text.style.left = x     + 'px';
+      $cnvs.appendChild($text)
+      $text.focus()
     }
   }
 
@@ -76,8 +89,6 @@ class Canvas extends Component {
   }
 
   render() {
-    console.log('canvas', this.props)
-
     return (
       <canvas
         // We use the ref attribute to get direct access to the canvas element.

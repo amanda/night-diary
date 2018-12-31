@@ -15,6 +15,16 @@ export const selectColor = color => ({
   color
 })
 
+export const selectFont = font => ({
+  type: types.SELECT_FONT,
+  font
+})
+
+export const selectPaper = paper => ({
+  type: types.SELECT_FONT,
+  paper
+})
+
 export const stickerPage = direction => ({
   type: types.STICKER_PAGE,
   direction
@@ -22,5 +32,15 @@ export const stickerPage = direction => ({
 
 export const colorPage = direction => ({
   type: types.COLOR_PAGE,
+  direction
+})
+
+export const fontPage = direction => ({
+  type: types.FONT_PAGE,
+  direction
+})
+
+export const paperPage = direction => ({
+  type: types.PAPER_PAGE,
   direction
 })

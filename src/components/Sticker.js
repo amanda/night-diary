@@ -9,8 +9,7 @@ const Sticker = ({ name, selected, onStickerSelect, onModeSelect }) => {
     onModeSelect('sticker')
   }
   const style = {
-    border: isSelected ? '.1em solid yellow' : '',
-    borderRadius: '10em'
+    backgroundColor: isSelected ? 'orange' : '',
   }
   return (
     <div style={style} onClick={() => select(name)} className={`${name} sticker`}><img src={img} alt={name} /></div>

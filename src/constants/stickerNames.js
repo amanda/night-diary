@@ -11,6 +11,7 @@ import dots from '../img/stickers/dots.png'
 import envelope from '../img/stickers/envelope.png'
 import fleur from '../img/stickers/fleur.png'
 import fleur2 from '../img/stickers/fleur2.png'
+import fleur3 from '../img/stickers/fleur3.png'
 import floor from '../img/stickers/floor.png'
 import fullmoon from '../img/stickers/fullmoon.png'
 import halfmoon1 from '../img/stickers/halfmoon1.png'
@@ -38,52 +39,54 @@ import wing1 from '../img/stickers/wing1.png'
 import zz from '../img/stickers/zz.png'
 
 export const STICKERS_PAGEONE = [
-  'pencil',
+[  'pencil',
   'music',
   'zz',
   'heart',
   'fleur',
   'fleur2',
   // 'leaf',
-  'bubble',
+],
+[ 'bubble',
   'bubble2',
   'dots',
-  'heart2'
-  // 'fleur3',
+  'heart2',
+  'fleur3',
   // 'fleur4',
   // 'fleur5'
+  ]
 ]
 export const STICKERS_PAGETWO = [
-  'lamp',
-  'bed',
-  'windoww',
+  ['lamp'],
+  ['bed'],
+  ['windoww',
   'cat',
-  'floor',
-  'boombox',
+  'floor'],
+  ['boombox',
   'car',
-  'envelope',
-  'phone',
-  'house',
+  'envelope'],
+  ['house'],
+  ['phone',
   'mug',
-  'milk'
+  'milk']
 ]
 export const STICKERS_PAGETHREE = [
-  'wing1',
+  ['wing1',
   'wing2',
-  'sword',
+  'sparkle1',
+  'moon',
+  'crescent1',
+  'halfmoon1',
+  'fullmoon'],
+  ['sword',
   'candle',
   'luna',
-  'sparkle1',
   'sparkle2',
   'sparkle3',
-  'moon',
   'moon2',
-  'crescent1',
   'crescent2',
-  'halfmoon1',
   'halfmoon2',
-  'fullmoon',
-  'newmoon'
+  'newmoon']
 ]
 
 export const getImg = name => {
@@ -130,6 +133,9 @@ export const getImg = name => {
       break
     case 'fleur2':
       img = fleur2
+      break
+    case 'fleur3':
+      img = fleur3
       break
     case 'floor':
       img = floor

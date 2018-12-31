@@ -21,13 +21,19 @@ const StickerPicker = ({ selected, onStickerSelect, onModeSelect, onStickerPage,
     default:
       currentStickers = STICKERS_PAGEONE
   }
-  const stickers = currentStickers.map((sticker, index) =>
-    <Sticker key={index} name={sticker} selected={selected} onStickerSelect={onStickerSelect} onModeSelect={onModeSelect}/>
+  const stickers = currentStickers.map((stickerRow, index) =>
+    <div className="sticker-row" key={index}>
+      {stickerRow.map(sticker =>
+        <Sticker key={sticker} name={sticker} selected={selected} onStickerSelect={onStickerSelect} onModeSelect={onModeSelect}/>
+      )}
+    </div>
   )
   return (
-    <div className="picker sticker-picker">
+    <div className="sticker-picker-container">
       <img src={leftArrow} alt="right" className="arrow left-arrow" onClick={() => onStickerPage('down')} />
-      {stickers}
+      <div className="picker sticker-picker">
+        {stickers}
+      </div>
       <img src={rightArrow} alt="right" className="arrow right-arrow" onClick={() => onStickerPage('up')} />
     </div>
   )

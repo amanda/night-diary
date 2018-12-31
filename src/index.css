@@ -9,6 +9,12 @@ body {
   background-color: rgb(102, 100, 101);
 }
 
+/* @font-face {
+  font-family: 'MyWebFont';
+  src:  url('myfont.woff2') format('woff2'),
+        url('myfont.woff') format('woff');
+} */
+
 .notebook {
   margin: 10% 10% 5% 10%;
   background-image: url('./img/notebookcanvas.png');
@@ -22,9 +28,9 @@ body {
 }
 
 .sticker {
-  width: 100%;
   padding: .5em;
-  margin: .1em;
+  margin: .2em;
+  align-self: center;
 }
 
 .colorblock {
@@ -49,11 +55,44 @@ body {
 }
 
 .control-left {
+  display: flex;
   margin-right: 3em;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .control-right {
+  display: flex;
+}
 
+.font-picker-control {
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.paper-picker-control {
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.sticker-picker {
+  flex-direction: column;
+}
+
+.sticker-picker-container {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.paper-picker-container {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.paper-type-selector {
+  margin: .2em;
 }
 
 .arrow {
@@ -61,9 +100,27 @@ body {
 }
 
 .left-arrow {
-  margin-right: .25em;
+  margin-right: .35em;
 }
 
 .right-arrow {
-  margin-left: .25em;
+  margin-left: .35em;
+}
+
+.sticker-row {
+  display: flex;
+}
+
+.typing-area {
+  position: absolute;
+  background: transparent;
+  border: 0px;
+  caret-color: white;
+  color: white;
+  padding: 1em;
+  font-size: 1em;
+}
+
+input:focus {
+  outline: none;
 }

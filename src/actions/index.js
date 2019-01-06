@@ -21,7 +21,7 @@ export const selectFont = font => ({
 })
 
 export const selectPaper = paper => ({
-  type: types.SELECT_FONT,
+  type: types.SELECT_PAPER,
   paper
 })
 

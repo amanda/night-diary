@@ -1,6 +1,7 @@
 import { SELECT_PAPER, PAPER_PAGE } from '../constants/actionTypes'
 
-const font = (state={name: '', page: 1}, action) => {
+const paper = (state={name: '', page: 1}, action) => {
+  console.log('paper reducer', action)
   switch (action.type) {
     case SELECT_PAPER:
       return {
@@ -27,4 +28,4 @@ const font = (state={name: '', page: 1}, action) => {
   }
 }
 
-export default font
+export default paper

@@ -2,31 +2,34 @@ import React from 'react'
 import StickerPicker from './StickerPicker'
 import ColorPicker from './ColorPicker'
 import FontPicker from './FontPicker'
-import PaperPicker from './PaperPicker'
+// import PaperPicker from './PaperPicker'
+
+// TODO:
+// <div className="control paper-picker-control">
+//   <PaperPicker
+//     selected={selectedPaper}
+//     onPaperSelect={onPaperSelect}
+//     onPaperPage={onPaperPage}
+//     currentPaperPage={currentPaperPage} />
+// </div>
 
 const ControlPanel = ({ selectedColor, selectedMode, selectedSticker,
   selectedFont, selectedPaper,
   onColorSelect, onModeSelect, onStickerSelect, onFontSelect, onPaperSelect,
   onStickerPage, onColorPage, onFontPage, onPaperPage,
   currentStickerPage, currentColorPage, currentFontPage, currentPaperPage }) => {
+
   return (
     <div className="control-panel">
       <div className="control-left">
-        <div className="control-top-left">
-          <div className="control paper-picker-control right-side-control">
+        <div className="">
+          <div className="control color-picker-control">
             <ColorPicker
               selected={selectedColor}
               onColorSelect={onColorSelect}
               onModeSelect={onModeSelect}
               onColorPage={onColorPage}
               currentColorPage={currentColorPage} />
-          </div>
-          <div className="control paper-picker-control">
-            <PaperPicker
-              selected={selectedPaper}
-              onPaperSelect={onPaperSelect}
-              onPaperPage={onPaperPage}
-              currentPaperPage={currentPaperPage} />
           </div>
         </div>
         <div className="control font-picker-control">

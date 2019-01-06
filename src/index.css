@@ -9,17 +9,23 @@ body {
   background-color: rgb(102, 100, 101);
 }
 
-/* @font-face {
-  font-family: 'MyWebFont';
-  src:  url('myfont.woff2') format('woff2'),
-        url('myfont.woff') format('woff');
-} */
-
 .notebook {
-  margin: 5% 10% 5% 10%;
+  margin: 5% 10% 2% 10%;
   background-image: url('./img/notebookcanvas.png');
   background-repeat: no-repeat;
   align-self: center;
+}
+
+.canvas-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.save-button {
+  margin: 10% 0 0 70%;
+  color: white;
+  background-color: black;
+  padding: .2em;
 }
 
 .control-panel {
@@ -28,7 +34,7 @@ body {
 }
 
 .sticker {
-  padding: .5em;
+  padding: .2em;
   margin: .2em;
   align-self: center;
 }
@@ -42,7 +48,6 @@ body {
 .picker {
   display: flex;
   justify-content: center;
-  align-items: center;
   color: white;
   cursor: pointer;
 }
@@ -57,15 +62,17 @@ body {
   display: flex;
   margin-right: 3em;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .control-top-left {
   display: flex;
+  align-items: baseline;
+  color: white;
 }
 
 .control-right {
   display: flex;
+  width: 35%;
 }
 
 .font-picker-control {
@@ -77,21 +84,26 @@ body {
   flex-direction: column;
 }
 
-.right-side-control {
-  margin-right: .5em;
+.font-selector {
+  padding: .25em;
 }
+
+/* .right-side-control {
+  margin-right: .5em;
+} */
 
 .color-picker {
   display: flex;
   align-items: center;
   padding: 1em;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .sticker-picker-container {
   display: flex;
   align-items: center;
   padding: 1em;
+  margin: 0 auto;
 }
 
 .paper-picker-container {
@@ -109,15 +121,16 @@ body {
 }
 
 .left-arrow {
-  margin-right: .35em;
+  margin-right: .5em;
 }
 
 .right-arrow {
-  margin-left: .35em;
+  margin-left: .5em;
 }
 
 .sticker-row {
   display: flex;
+  justify-content: space-between;
 }
 
 .typing-area {
@@ -132,4 +145,63 @@ body {
 
 input:focus {
   outline: none;
+}
+
+/* stickers */
+.bed {
+  margin-top: 2em;
+  margin-left: -4em;
+}
+
+.windoww {
+  margin-left: -4em;
+  margin-bottom: 1.5em;
+  margin-right: 1em;
+}
+
+.cat {
+  margin-bottom: 2em;
+  margin-left: 3em;
+  margin-top: -2.5em;
+  margin-right: 1em;
+}
+
+.floor {
+  margin-left: -1em;
+  margin-top: -3em;
+}
+
+.car {
+  margin-top: -4em;
+}
+
+.envelope {
+  margin-top: -4em;
+  margin-left: -.25em;
+  margin-right: .25em;
+}
+
+.phone {
+  margin-top: -5em;
+  margin-left: -.25em;
+}
+
+.boombox {
+  margin-left: -2em;
+  margin-right: -3.25em;
+  margin-bottom: 1.5em;
+}
+
+.house {
+  margin-right: 2.25em;
+  margin-bottom: 2.75em;
+}
+
+.mug {
+  margin-top: -4.25em;
+  margin-left: -.25em;
+}
+
+.milk {
+  margin-top: -4.75em;
 }

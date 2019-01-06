@@ -57,16 +57,16 @@ export const STICKERS_PAGEONE = [
   ]
 ]
 export const STICKERS_PAGETWO = [
-  ['lamp'],
-  ['bed'],
-  ['windoww',
-  'cat',
-  'floor'],
-  ['boombox',
+  ['lamp',
+  'bed',
+  'windoww',
+  'boombox',
+  'house'],
+  ['cat',
+  'floor',
   'car',
-  'envelope'],
-  ['house'],
-  ['phone',
+  'envelope',
+  'phone',
   'mug',
   'milk']
 ]

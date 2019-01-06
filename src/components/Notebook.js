@@ -3,13 +3,11 @@ import Canvas from './Canvas'
 
 class Notebook extends Component {
   render() {
-    console.log('notebook props?', this.props)
-    const color = this.props.selectedColor
-    const mode = this.props.selectedMode
-    const sticker = this.props.selectedSticker
+    const { selectedColor, selectedMode, selectedSticker, selectedFont, selectedPaper } = this.props
     return (
       <div className="notebook">
-        <Canvas color={color} sticker={sticker} mode={mode} />
+        <Canvas color={selectedColor} sticker={selectedSticker}
+          mode={selectedMode} paper={selectedPaper} font={selectedFont} />
       </div>
     )
   }

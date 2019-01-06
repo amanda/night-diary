@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { getImg } from '../constants/stickerNames'
 import * as modeTypes from '../constants/journalModes'
+import { getFont } from '../constants/fonts'
+import { getPaper } from '../constants/paperTypes'
 
 class Canvas extends Component {
   constructor(props) {
@@ -30,11 +32,13 @@ class Canvas extends Component {
       this.ctx.drawImage(img, offsetX, offsetY)
     }
     if (this.props.mode === modeTypes.TYPING) {
+      const font = getFont(this.props.font)
       const $text = document.createElement('input')
       $text.type = 'input'
       const $cnvs = document.querySelector('.notebook')
       console.log($cnvs)
       $text.className = 'typing-area'
+      $text.style.fontFamily = font
       $text.style.top = y + 'px';
       $text.style.left = x     + 'px';
       $cnvs.appendChild($text)
@@ -79,25 +83,37 @@ class Canvas extends Component {
   }
 
   componentDidMount() {
-    // Here we set up the properties of the canvas element.
     this.canvas.width = 650
     this.canvas.height = 420
     this.ctx = this.canvas.getContext('2d')
     this.ctx.lineJoin = 'round'
     this.ctx.lineCap = 'round'
     this.ctx.lineWidth = 5
+
+    // const $cnvs = document.querySelector('.notebook-canvas')
+    // const $dl = document.querySelector('.save-button')
+    // const data = $cnvs.toDataURL()
+    // $dl.download = "pixeldiary.png"
+    // $dl.href = data
+    // TODO:         <div><a href="" className="save-button">✧⊹save✵˚</a></div>
   }
 
   render() {
+    // const paper = getPaper(this.props.paper)
+    // const bg = paper ? {
+    //   background: `url(${paper})`,
+    // } : {}
     return (
-      <canvas
-        // We use the ref attribute to get direct access to the canvas element.
-        ref={(ref) => (this.canvas = ref)}
-        onMouseDown={this.onMouseDown}
-        onMouseLeave={this.endPaintEvent}
-        onMouseUp={this.endPaintEvent}
-        onMouseMove={this.onMouseMove}
-      />
+      <div className="canvas-container">
+        <canvas
+          className="notebook-canvas"
+          ref={(ref) => (this.canvas = ref)}
+          onMouseDown={this.onMouseDown}
+          onMouseLeave={this.endPaintEvent}
+          onMouseUp={this.endPaintEvent}
+          onMouseMove={this.onMouseMove}
+        />
+      </div>
     )
   }
 }

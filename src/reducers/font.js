@@ -1,6 +1,6 @@
 import { SELECT_FONT, FONT_PAGE } from '../constants/actionTypes'
 
-const font = (state={}, action) => {
+const font = (state={name: '', page: 1}, action) => {
   switch (action.type) {
     case SELECT_FONT:
       return {

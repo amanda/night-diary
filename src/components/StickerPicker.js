@@ -23,8 +23,8 @@ const StickerPicker = ({ selected, onStickerSelect, onModeSelect, onStickerPage,
   }
   const stickers = currentStickers.map((stickerRow, index) =>
     <div className="sticker-row" key={index}>
-      {stickerRow.map(sticker =>
-        <Sticker key={sticker} name={sticker} selected={selected} onStickerSelect={onStickerSelect} onModeSelect={onModeSelect}/>
+      {stickerRow.map((sticker, ind) =>
+        <Sticker key={sticker + index} name={sticker} selected={selected} onStickerSelect={onStickerSelect} onModeSelect={onModeSelect}/>
       )}
     </div>
   )

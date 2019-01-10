@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { getImg } from '../constants/stickerNames'
 import * as modeTypes from '../constants/journalModes'
 import { getFont } from '../constants/fonts'
-import { getPaper } from '../constants/paperTypes'
+// import { getPaper } from '../constants/paperTypes'
+import html2canvas from 'html2canvas'
 
 class Canvas extends Component {
   constructor(props) {
@@ -35,7 +36,7 @@ class Canvas extends Component {
       const font = getFont(this.props.font)
       const $text = document.createElement('input')
       $text.type = 'input'
-      const $cnvs = document.querySelector('.notebook')
+      const $cnvs = document.querySelector('#html2canvas')
       console.log($cnvs)
       $text.className = 'typing-area'
       $text.style.fontFamily = font
@@ -89,13 +90,18 @@ class Canvas extends Component {
     this.ctx.lineJoin = 'round'
     this.ctx.lineCap = 'round'
     this.ctx.lineWidth = 5
+  }
 
-    // const $cnvs = document.querySelector('.notebook-canvas')
-    // const $dl = document.querySelector('.save-button')
-    // const data = $cnvs.toDataURL()
-    // $dl.download = "pixeldiary.png"
-    // $dl.href = data
-    // TODO:         <div><a href="" className="save-button">✧⊹save✵˚</a></div>
+  onSave(evt) {
+    evt.preventDefault()
+    const $dl = document.createElement('a')
+    const $cnvs = document.querySelector('#html2canvas')
+    html2canvas($cnvs, { backgroundColor: 'black' }).then(c => {
+      const data = c.toDataURL()
+      $dl.download = "pixeldiary.png"
+      $dl.href = data
+      $dl.click()
+    })
   }
 
   render() {
@@ -105,14 +111,17 @@ class Canvas extends Component {
     // } : {}
     return (
       <div className="canvas-container">
-        <canvas
-          className="notebook-canvas"
-          ref={(ref) => (this.canvas = ref)}
-          onMouseDown={this.onMouseDown}
-          onMouseLeave={this.endPaintEvent}
-          onMouseUp={this.endPaintEvent}
-          onMouseMove={this.onMouseMove}
-        />
+        <div id="html2canvas">
+          <canvas
+            className="notebook-canvas"
+            ref={(ref) => (this.canvas = ref)}
+            onMouseDown={this.onMouseDown}
+            onMouseLeave={this.endPaintEvent}
+            onMouseUp={this.endPaintEvent}
+            onMouseMove={this.onMouseMove}
+          />
+        </div>
+        <div><a href="#" className="save-button" onClick={(evt) => this.onSave(evt)}>✧⊹save✵˚</a></div>
       </div>
     )
   }

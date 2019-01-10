@@ -5,6 +5,7 @@
   "homepage": "https://amanda.github.io/night-diary",
   "dependencies": {
     "gh-pages": "^2.0.1",
+    "html2canvas": "^1.0.0-alpha.12",
     "lodash.isempty": "^4.4.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",

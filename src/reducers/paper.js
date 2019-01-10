@@ -1,7 +1,6 @@
 import { SELECT_PAPER, PAPER_PAGE } from '../constants/actionTypes'
 
 const paper = (state={name: '', page: 1}, action) => {
-  console.log('paper reducer', action)
   switch (action.type) {
     case SELECT_PAPER:
       return {

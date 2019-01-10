@@ -21,6 +21,10 @@ body {
   flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+}
+
 .save-button {
   margin: 10% 0 0 70%;
   color: white;

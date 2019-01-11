@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/night-diary/precache-manifest.2f8a850e10ac8ee5fe68ef9dec533ab1.js"
+  "/night-diary/precache-manifest.3eadf0ae1652bbb3dd4a506708b97c5a.js"
 );
 
 workbox.clientsClaim();

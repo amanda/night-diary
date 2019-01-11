@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/night-diary/static/js/runtime~main.f3ebf040.js"
   },
   {
-    "revision": "dc72c87d1eb16b6d10d0",
-    "url": "/night-diary/static/js/main.dc72c87d.chunk.js"
+    "revision": "a0dc4acfe69eee70537d",
+    "url": "/night-diary/static/js/main.a0dc4acf.chunk.js"
   },
   {
     "revision": "f0862843c9d6fbdeabcc",
     "url": "/night-diary/static/js/1.f0862843.chunk.js"
   },
   {
-    "revision": "dc72c87d1eb16b6d10d0",
-    "url": "/night-diary/static/css/main.1994022a.chunk.css"
+    "revision": "a0dc4acfe69eee70537d",
+    "url": "/night-diary/static/css/main.8b8f1371.chunk.css"
   },
   {
-    "revision": "74b9b846e45bb52c563b4b9a6425ca65",
+    "revision": "00a4ca055b6142b81eedf8abb59738b9",
     "url": "/night-diary/index.html"
   }
 ];

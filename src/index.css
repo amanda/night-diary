@@ -35,6 +35,7 @@ a {
 .control-panel {
   display: flex;
   justify-content: center;
+  margin: 0 5% 0 5%;
 }
 
 .sticker {
@@ -66,6 +67,7 @@ a {
   display: flex;
   margin-right: 3em;
   flex-direction: column;
+  width: 25%;
 }
 
 .control-top-left {
@@ -89,7 +91,6 @@ a {
 }
 
 .font-selector {
-  padding: .25em;
 }
 
 /* .right-side-control {
@@ -99,8 +100,7 @@ a {
 .color-picker {
   display: flex;
   align-items: center;
-  padding: 1em;
-  justify-content: space-evenly;
+  padding: .25em;
 }
 
 .sticker-picker-container {

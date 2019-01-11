@@ -84,7 +84,7 @@ class Canvas extends Component {
   }
 
   componentDidMount() {
-    this.canvas.width = 650
+    this.canvas.width = 635
     this.canvas.height = 420
     this.ctx = this.canvas.getContext('2d')
     this.ctx.lineJoin = 'round'

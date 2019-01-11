@@ -31,7 +31,7 @@ const FontPicker = ({ selected, onFontSelect, onModeSelect, onFontPage, currentF
   return (
     <div className="picker color-picker" onClick={() => onModeSelect(modeTypes.TYPING)}>
       <img src={leftArrow} alt="left" className="arrow left-arrow" onClick={() => onFontPage('down')} />
-        <div className="font-selector" style={style} onClick={() => onFontSelect(fontName)}>{fontName}</div>
+        <div className="font-selector" style={style} onClick={() => onFontSelect(fontName)}>abcdefghijklmno</div>
       <img src={rightArrow} alt="right" className="arrow right-arrow" onClick={() => onFontPage('up')} />
     </div>
   )
